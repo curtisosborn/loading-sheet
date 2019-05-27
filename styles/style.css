@@ -340,4 +340,81 @@ header .checks input textarea:focus {
   margin: 5px;
 }
 
-.
+.loading .loading-card .bus-voltage-right {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 5px;
+}
+
+.loading .loading-card .reading-right {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 5px;
+}
+
+.red {
+  color: #ce4747;
+}
+
+.green {
+  color: #04b5cc;
+}
+
+i {
+  cursor: pointer;
+}
+
+@media print {
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: transparent;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: transparent;
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: transparent;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: transparent;
+  }
+  .title input {
+    font-weight: 700;
+  }
+  .container {
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  h1 {
+    font-size: 2em !important;
+    color: black !important;
+  }
+  body {
+    color: #1b1b1b;
+  }
+  input {
+    color: black !important;
+    font-weight: 700;
+    font-size: 2.5em;
+  }
+  .dark-grey {
+    opacity: 0;
+  }
+  .green {
+    color: #030303;
+  }
+  .print {
+    opacity: 0;
+  }
+  .red {
+    color: black;
+  }
+  .fa-square {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
