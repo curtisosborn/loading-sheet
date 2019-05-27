@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,14 +8,50 @@
 }
 
 body {
-  background-color: #24262b;
-  color: #a09f9f;
+  background-color: #16171a;
+  color: #c2c1c1;
 }
 
 input {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   outline: none;
+}
+
+.print-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.print-btn .print {
+  color: #dbdbda;
+}
+
+.print-btn .print:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container {
+  margin: 20px auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 25px;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1200px;
+  background: #24262b;
+  border-left: 3px solid #30333a;
+  border-right: 3px solid #30333a;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
 }
 
 header {
@@ -55,6 +91,7 @@ header .limits input {
   border: none;
   border-bottom: 1px solid #666666;
   background-color: #15161a;
+  font-weight: 700;
   color: #ce4747;
 }
 
@@ -103,22 +140,22 @@ header .limits .loading-limits div {
 
 header .title {
   letter-spacing: 2px;
-  margin: 30px;
-  color: olivedrab;
-  font-weight: bold;
+  margin: 50px 0 30px 0;
+  color: #cecfcf;
   font-size: 3em;
 }
 
 header input {
   padding: 5px;
-  width: 200px;
+  width: 350px;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   border-radius: 2px;
   border: none;
   border-bottom: 1px solid #666666;
   background-color: #15161a;
   color: olivedrab;
+  font-weight: 400;
 }
 
 header input:focus,
@@ -134,10 +171,24 @@ header .checks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 header .checks div {
   margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .checks div label {
+  margin: 8px;
 }
 
 header .checks input {
@@ -145,6 +196,7 @@ header .checks input {
   width: 70px;
   text-align: center;
   font-size: 1.2rem;
+  font-weight: 700;
   border-radius: 2px;
   border: none;
   border-bottom: 1px solid #666666;
@@ -256,6 +308,7 @@ header .checks input textarea:focus {
   border-bottom: 1px solid #666666;
   background-color: #15161a;
   color: #0090a3;
+  font-weight: 700;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -287,57 +340,4 @@ header .checks input textarea:focus {
   margin: 5px;
 }
 
-.loading .loading-card .bus-voltage-right {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  margin: 5px;
-}
-
-.loading .loading-card .reading-right {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin: 5px;
-}
-
-.green {
-  color: #04b5cc;
-}
-
-i {
-  cursor: pointer;
-}
-
-@media print {
-  ::-webkit-input-placeholder {
-    /* WebKit browsers */
-    color: transparent;
-  }
-  :-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    color: transparent;
-  }
-  ::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    color: transparent;
-  }
-  :-ms-input-placeholder {
-    /* Internet Explorer 10+ */
-    color: transparent;
-  }
-  h1 {
-    font-size: 2em !important;
-    color: black !important;
-  }
-  body {
-    color: #1b1b1b;
-  }
-  input {
-    color: black !important;
-    font-weight: bold;
-    font-size: 2.5em;
-  }
-  .dark-grey {
-    opacity: 0;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+.
