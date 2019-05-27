@@ -14,356 +14,375 @@
     <title>Switching Order</title>
   </head>
   <body>
-    <header>
-      <h1 class="title">Sub-T Loading Sheet</h1>
-      <input
-        type="text"
-        placeholder="Switching Order"
-        id="switching-order"
-        onchange="updateTitle()"
-        tabindex="1"
-      />
-      <div class="checks">
-        <div>
-          <label for="voltage">Voltage:</label>
-          <input type="text" id="voltage" tabindex="2" />
+    <div class="container">
+      <header>
+        <div class="title-container">
+          <h1 class="title">Sub-T Loading Sheet</h1>
         </div>
-        <div>
-          <label for="arcing">Arcing kVA:</label>
-          <input type="text" id="arcing" tabindex="3" />
-        </div>
-        <div>
-          <label for="phase">Phase Angle:</label>
-          <input type="text" id="phase" tabindex="4" />
-        </div>
-        <div>
-          <label for="backup">Backup Plan:</label>
-          <input type="text" id="backup" tabindex="5" />
-        </div>
-        <div>
-          <label for="one15">115 Intact:</label>
-          <input type="text" id="one15" tabindex="6" />
-        </div>
-        <div>
-          <label for="loading">Loading:</label>
-          <input type="text" id="loading" tabindex="7" />
-        </div>
-      </div>
-      <div class="limits">
-        <div class="ems-limits">
+        <input
+          type="text"
+          placeholder="Switching Order"
+          id="switching-order"
+          onchange="updateTitle()"
+          tabindex="1"
+        />
+        <div class="checks">
           <div>
-            <label for="ems-transformer">
-              Transformer EMS Loading Alarm Limit (MVA)
-              <input type="text" tabindex="8" />
-            </label>
+            <label for="voltage">Voltage:</label>
+            <input type="text" id="voltage" tabindex="2" />
           </div>
           <div>
-            <label for="ems-breaker">
-              Breaker EMS Loading Alarm Limit (MVA)
-              <input type="text" tabindex="9" />
-            </label>
-          </div>
-        </div>
-        <div class="loading-limits">
-          <div>
-            <label for="transformer-limit">
-              Transformer Loading Limit for Voltage (MVA)
-              <input type="text" tabindex="10" />
-            </label>
+            <label for="arcing">Arcing kVA:</label>
+            <input type="text" id="arcing" tabindex="3" />
           </div>
           <div>
-            <label for="breaker-limit">
-              Breaker Loading Limit for Voltage (MVA)
-              <input type="text" tabindex="11" />
-            </label>
+            <label for="phase">Phase Angle:</label>
+            <input type="text" id="phase" tabindex="4" />
           </div>
           <div>
-            <label for="specific-limit">
-              Specific Limiter
-              <input type="text" width="125px" tabindex="12" />
-            </label>
-            <label for="specific-limit">
-              Limit
-              <input type="text" tabindex="13" />
-            </label>
+            <label for="backup">Backup Plan:</label>
+            <i class="fas fa-square fa-2x"></i>
+            <!-- <input type="text" id="backup" tabindex="5" /> -->
+          </div>
+          <div>
+            <label for="one15">115 Intact:</label>
+            <i class="fas fa-square fa-2x"></i>
+            <!-- <input type="text" id="one15" tabindex="6" /> -->
+          </div>
+          <div>
+            <label for="loading">Loading:</label>
+            <i class="fas fa-square fa-2x"></i>
+            <!-- <input type="text" id="loading" tabindex="7" /> -->
           </div>
         </div>
-      </div>
-    </header>
-    <div class="loading">
-      <div class="left-side">
-        <div class="location">
-          <input
-            type="text"
-            id="from"
-            placeholder="From Breaker"
-            tabindex="14"
-          />
+        <div class="limits">
+          <div class="ems-limits">
+            <div>
+              <label for="ems-transformer">
+                Transformer EMS Loading Alarm Limit (MVA)
+                <input type="text" tabindex="8" />
+              </label>
+            </div>
+            <div>
+              <label for="ems-breaker">
+                Breaker EMS Loading Alarm Limit (MVA)
+                <input type="text" tabindex="9" />
+              </label>
+            </div>
+          </div>
+          <div class="loading-limits">
+            <div>
+              <label for="transformer-limit">
+                Transformer Loading Limit for Voltage (MVA)
+                <input type="text" tabindex="10" />
+              </label>
+            </div>
+            <div>
+              <label for="breaker-limit">
+                Breaker Loading Limit for Voltage (MVA)
+                <input type="text" tabindex="11" />
+              </label>
+            </div>
+            <div>
+              <label for="specific-limit">
+                Specific Limiter
+                <input type="text" width="125px" tabindex="12" />
+              </label>
+              <label for="specific-limit">
+                Limit
+                <input type="text" tabindex="13" />
+              </label>
+            </div>
+          </div>
         </div>
+      </header>
+      <div class="loading">
+        <div class="left-side">
+          <div class="location">
+            <input
+              type="text"
+              id="from"
+              placeholder="From Breaker"
+              tabindex="14"
+            />
+          </div>
 
-        <div class="loading-card">
-          <div class="bus-voltage">
-            <label for="voltage">
-              Bus Voltage
-              <input type="text" tabindex="16" />
-            </label>
+          <div class="loading-card">
+            <div class="bus-voltage">
+              <label for="voltage">
+                Bus Voltage
+                <input type="text" tabindex="16" />
+              </label>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MVA
+                <input type="text" tabindex="17" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg white"></i>
+              <i class="fas fa-arrow-right fa-lg white" id="right-one"></i>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MW
+                <input type="text" tabindex="18" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg dark-grey" id="left-one"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MX
+                <input type="text" tabindex="19" />
+              </label>
+              <i
+                class="fas fa-arrow-left fa-lg dark-grey"
+                ontoggle="test();"
+              ></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+            </div>
           </div>
-          <div class="reading">
-            <label for="voltage">
-              MVA
-              <input type="text" tabindex="17" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg white"></i>
-            <i class="fas fa-arrow-right fa-lg white" id="right-one"></i>
+          <div class="loading-card">
+            <div class="bus-voltage">
+              <label for="voltage">
+                Bus Voltage
+                <input type="text" tabindex="24" />
+              </label>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MVA
+                <input type="text" tabindex="25" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg white"></i>
+              <i class="fas fa-arrow-right fa-lg white"></i>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MW
+                <input type="text" tabindex="26" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MX
+                <input type="text" tabindex="27" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+            </div>
           </div>
-          <div class="reading">
-            <label for="voltage">
-              MW
-              <input type="text" tabindex="18" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg dark-grey" id="left-one"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+          <div class="loading-card">
+            <div class="bus-voltage">
+              <label for="voltage">
+                Bus Voltage
+                <input type="text" tabindex="32" />
+              </label>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MVA
+                <input type="text" tabindex="33" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg white"></i>
+              <i class="fas fa-arrow-right fa-lg white"></i>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MW
+                <input type="text" tabindex="34" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MX
+                <input type="text" tabindex="35" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+            </div>
           </div>
-          <div class="reading">
-            <label for="voltage">
-              MX
-              <input type="text" tabindex="19" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg dark-grey" ontoggle="test();"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+          <div class="loading-card">
+            <div class="bus-voltage">
+              <label for="voltage">
+                Bus Voltage
+                <input type="text" tabindex="40" />
+              </label>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MVA
+                <input type="text" tabindex="41" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg white"></i>
+              <i class="fas fa-arrow-right fa-lg white"></i>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MW
+                <input type="text" tabindex="42" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+            </div>
+            <div class="reading">
+              <label for="voltage">
+                MX
+                <input type="text" tabindex="43" />
+              </label>
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+            </div>
           </div>
         </div>
-        <div class="loading-card">
-          <div class="bus-voltage">
-            <label for="voltage">
-              Bus Voltage
-              <input type="text" tabindex="24" />
-            </label>
+        <div class="right-side">
+          <div class="location">
+            <input
+              type="text"
+              id="from"
+              placeholder="To Breaker"
+              tabindex="15"
+            />
           </div>
-          <div class="reading">
-            <label for="voltage">
-              MVA
-              <input type="text" tabindex="25" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg white"></i>
-            <i class="fas fa-arrow-right fa-lg white"></i>
+          <div class="loading-card">
+            <div class="bus-voltage-right">
+              <label for="voltage">
+                <input type="text" tabindex="20" />
+                Bus Voltage
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg white"></i>
+              <i class="fas fa-arrow-right fa-lg white"></i>
+              <label for="voltage">
+                <input type="text" tabindex="21" />
+                MVA
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <label for="voltage">
+                <input type="text" tabindex="22" />
+                MW
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <label for="voltage">
+                <input type="text" tabindex="23" />
+                MX
+              </label>
+            </div>
           </div>
-          <div class="reading">
-            <label for="voltage">
-              MW
-              <input type="text" tabindex="26" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+          <div class="loading-card">
+            <div class="bus-voltage-right">
+              <label for="voltage">
+                <input type="text" tabindex="28" />
+                Bus Voltage
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg white"></i>
+              <i class="fas fa-arrow-right fa-lg white"></i>
+              <label for="voltage">
+                <input type="text" tabindex="29" />
+                MVA
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <label for="voltage">
+                <input type="text" tabindex="30" />
+                MW
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <label for="voltage">
+                <input type="text" tabindex="31" />
+                MX
+              </label>
+            </div>
           </div>
-          <div class="reading">
-            <label for="voltage">
-              MX
-              <input type="text" tabindex="27" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+          <div class="loading-card">
+            <div class="bus-voltage-right">
+              <label for="voltage">
+                <input type="text" tabindex="36" />
+                Bus Voltage
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg white"></i>
+              <i class="fas fa-arrow-right fa-lg white"></i>
+              <label for="voltage">
+                <input type="text" tabindex="37" />
+                MVA
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <label for="voltage">
+                <input type="text" tabindex="38" />
+                MW
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <label for="voltage">
+                <input type="text" tabindex="39" />
+                MX
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="loading-card">
-          <div class="bus-voltage">
-            <label for="voltage">
-              Bus Voltage
-              <input type="text" tabindex="32" />
-            </label>
-          </div>
-          <div class="reading">
-            <label for="voltage">
-              MVA
-              <input type="text" tabindex="33" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg white"></i>
-            <i class="fas fa-arrow-right fa-lg white"></i>
-          </div>
-          <div class="reading">
-            <label for="voltage">
-              MW
-              <input type="text" tabindex="34" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-          </div>
-          <div class="reading">
-            <label for="voltage">
-              MX
-              <input type="text" tabindex="35" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-          </div>
-        </div>
-        <div class="loading-card">
-          <div class="bus-voltage">
-            <label for="voltage">
-              Bus Voltage
-              <input type="text" tabindex="40" />
-            </label>
-          </div>
-          <div class="reading">
-            <label for="voltage">
-              MVA
-              <input type="text" tabindex="41" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg white"></i>
-            <i class="fas fa-arrow-right fa-lg white"></i>
-          </div>
-          <div class="reading">
-            <label for="voltage">
-              MW
-              <input type="text" tabindex="42" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-          </div>
-          <div class="reading">
-            <label for="voltage">
-              MX
-              <input type="text" tabindex="43" />
-            </label>
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+          <div class="loading-card">
+            <div class="bus-voltage-right">
+              <label for="voltage">
+                <input type="text" tabindex="44" />
+                Bus Voltage
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg white"></i>
+              <i class="fas fa-arrow-right fa-lg white"></i>
+              <label for="voltage">
+                <input type="text" tabindex="45" />
+                MVA
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <label for="voltage">
+                <input type="text" tabindex="46" />
+                MW
+              </label>
+            </div>
+            <div class="reading-right">
+              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <label for="voltage">
+                <input type="text" tabindex="47" />
+                MX
+              </label>
+            </div>
           </div>
         </div>
       </div>
-      <div class="right-side">
-        <div class="location">
-          <input type="text" id="from" placeholder="To Breaker" tabindex="15" />
-        </div>
-        <div class="loading-card">
-          <div class="bus-voltage-right">
-            <label for="voltage">
-              <input type="text" tabindex="20" />
-              Bus Voltage
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg white"></i>
-            <i class="fas fa-arrow-right fa-lg white"></i>
-            <label for="voltage">
-              <input type="text" tabindex="21" />
-              MVA
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-            <label for="voltage">
-              <input type="text" tabindex="22" />
-              MW
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-            <label for="voltage">
-              <input type="text" tabindex="23" />
-              MX
-            </label>
-          </div>
-        </div>
-        <div class="loading-card">
-          <div class="bus-voltage-right">
-            <label for="voltage">
-              <input type="text" tabindex="28" />
-              Bus Voltage
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg white"></i>
-            <i class="fas fa-arrow-right fa-lg white"></i>
-            <label for="voltage">
-              <input type="text" tabindex="29" />
-              MVA
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-            <label for="voltage">
-              <input type="text" tabindex="30" />
-              MW
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-            <label for="voltage">
-              <input type="text" tabindex="31" />
-              MX
-            </label>
-          </div>
-        </div>
-        <div class="loading-card">
-          <div class="bus-voltage-right">
-            <label for="voltage">
-              <input type="text" tabindex="36" />
-              Bus Voltage
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg white"></i>
-            <i class="fas fa-arrow-right fa-lg white"></i>
-            <label for="voltage">
-              <input type="text" tabindex="37" />
-              MVA
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-            <label for="voltage">
-              <input type="text" tabindex="38" />
-              MW
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-            <label for="voltage">
-              <input type="text" tabindex="39" />
-              MX
-            </label>
-          </div>
-        </div>
-        <div class="loading-card">
-          <div class="bus-voltage-right">
-            <label for="voltage">
-              <input type="text" tabindex="44" />
-              Bus Voltage
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg white"></i>
-            <i class="fas fa-arrow-right fa-lg white"></i>
-            <label for="voltage">
-              <input type="text" tabindex="45" />
-              MVA
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-            <label for="voltage">
-              <input type="text" tabindex="46" />
-              MW
-            </label>
-          </div>
-          <div class="reading-right">
-            <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-            <i class="fas fa-arrow-right fa-lg dark-grey"></i>
-            <label for="voltage">
-              <input type="text" tabindex="47" />
-              MX
-            </label>
-          </div>
-        </div>
+      <div class="print-btn">
+        <i class="fas fa-print fa-2x print"></i>
       </div>
     </div>
+
     <script src="app.js"></script>
   </body>
 </html>
