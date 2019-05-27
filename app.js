@@ -20,6 +20,15 @@ for (let i = 0; i < arrowBtns.length; i++) {
       case "fas fa-arrow-right fa-lg green":
         arrowBtns[i].classList.value = "fas fa-arrow-right fa-lg dark-grey";
         break;
+      case "fas fa-print fa-2x print":
+        window.print();
+        break;
+      case "fas fa-square fa-2x":
+        arrowBtns[i].classList.value = "fas fa-check-square fa-2x red";
+        break;
+      case "fas fa-check-square fa-2x red":
+        arrowBtns[i].classList.value = "fas fa-square fa-2x";
+        break;
       default:
         break;
     }
