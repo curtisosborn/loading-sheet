@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
@@ -19,6 +19,8 @@ input {
 }
 
 .print-btn {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 25px;
   right: 25px;
@@ -31,7 +33,12 @@ input {
 
 .print-btn .print:hover {
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.fas {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .container {
@@ -44,14 +51,14 @@ input {
   justify-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 1200px;
   background: #24262b;
   border-left: 3px solid #30333a;
   border-right: 3px solid #30333a;
   -webkit-box-shadow: 0 0 10px black;
-          box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
 }
 
 header {
@@ -61,15 +68,15 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 header .limits {
@@ -78,8 +85,8 @@ header .limits {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 header .limits input {
@@ -98,7 +105,7 @@ header .limits input {
 header .limits input:focus,
 header .limits input textarea:focus {
   -webkit-box-shadow: 0 0 5px #ce4747;
-          box-shadow: 0 0 5px #ce4747;
+  box-shadow: 0 0 5px #ce4747;
   border-bottom: 1px solid #ce4747;
 }
 
@@ -109,11 +116,11 @@ header .limits .ems-limits {
   width: 500px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 header .limits .ems-limits div {
@@ -127,11 +134,11 @@ header .limits .loading-limits {
   width: 500px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 header .limits .loading-limits div {
@@ -161,7 +168,7 @@ header input {
 header input:focus,
 header input textarea:focus {
   -webkit-box-shadow: 0 0 5px olivedrab;
-          box-shadow: 0 0 5px olivedrab;
+  box-shadow: 0 0 5px olivedrab;
   border-bottom: 1px solid olivedrab;
 }
 
@@ -172,7 +179,7 @@ header .checks {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 header .checks div {
@@ -181,10 +188,10 @@ header .checks div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 header .checks div label {
@@ -207,7 +214,7 @@ header .checks input {
 header .checks input:focus,
 header .checks input textarea:focus {
   -webkit-box-shadow: 0 0 5px #ce4747;
-          box-shadow: 0 0 5px #ce4747;
+  box-shadow: 0 0 5px #ce4747;
   border-bottom: 1px solid #ce4747;
 }
 
@@ -218,11 +225,11 @@ header .checks input textarea:focus {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .loading .left-side {
@@ -231,8 +238,8 @@ header .checks input textarea:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 325px;
   height: 900px;
   border-right: 4px solid #3e3e46;
@@ -244,8 +251,8 @@ header .checks input textarea:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 325px;
   height: 900px;
   border-left: 4px solid #34343a;
@@ -258,11 +265,11 @@ header .checks input textarea:focus {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 50px;
   width: 100%;
   border-bottom: 2px solid #3e3e46;
@@ -282,7 +289,7 @@ header .checks input textarea:focus {
 .loading .location input:focus,
 .loading .location input textarea:focus {
   -webkit-box-shadow: 0 0 10px olivedrab;
-          box-shadow: 0 0 10px olivedrab;
+  box-shadow: 0 0 10px olivedrab;
 }
 
 .loading .loading-card {
@@ -294,8 +301,8 @@ header .checks input textarea:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .loading .loading-card input {
@@ -316,7 +323,7 @@ header .checks input textarea:focus {
 .loading .loading-card input:focus,
 .loading .loading-card input textarea:focus {
   -webkit-box-shadow: 0 0 5px #0090a3;
-          box-shadow: 0 0 5px #0090a3;
+  box-shadow: 0 0 5px #0090a3;
   border-bottom: 1px solid #0090a3;
 }
 
@@ -330,25 +337,25 @@ header .checks input textarea:focus {
 
 .loading .loading-card .bus-voltage {
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin: 5px;
 }
 
 .loading .loading-card .reading {
   -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   margin: 5px;
 }
 
 .loading .loading-card .bus-voltage-right {
   -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   margin: 5px;
 }
 
 .loading .loading-card .reading-right {
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin: 5px;
 }
 
@@ -387,7 +394,7 @@ i {
   .container {
     border: none;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
   h1 {
     font-size: 2em !important;
@@ -406,6 +413,9 @@ i {
   }
   .green {
     color: #030303;
+  }
+  .print-btn {
+    display: none;
   }
   .print {
     opacity: 0;
