@@ -3,8 +3,23 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 body {
@@ -19,8 +34,13 @@ input {
 }
 
 .print-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   top: 25px;
   right: 25px;
@@ -33,7 +53,7 @@ input {
 
 .print-btn .print:hover {
   -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .fas {
@@ -51,14 +71,15 @@ input {
   justify-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 1200px;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1150px;
+  height: 1335px;
   background: #24262b;
   border-left: 3px solid #30333a;
   border-right: 3px solid #30333a;
   -webkit-box-shadow: 0 0 10px black;
-  box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
 }
 
 header {
@@ -68,15 +89,15 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 header .limits {
@@ -85,8 +106,8 @@ header .limits {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 header .limits input {
@@ -105,7 +126,7 @@ header .limits input {
 header .limits input:focus,
 header .limits input textarea:focus {
   -webkit-box-shadow: 0 0 5px #ce4747;
-  box-shadow: 0 0 5px #ce4747;
+          box-shadow: 0 0 5px #ce4747;
   border-bottom: 1px solid #ce4747;
 }
 
@@ -116,11 +137,11 @@ header .limits .ems-limits {
   width: 500px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 header .limits .ems-limits div {
@@ -134,11 +155,11 @@ header .limits .loading-limits {
   width: 500px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 header .limits .loading-limits div {
@@ -161,25 +182,25 @@ header input {
   border: none;
   border-bottom: 1px solid #666666;
   background-color: #15161a;
-  color: olivedrab;
+  color: #2ecc71;
   font-weight: 400;
 }
 
 header input:focus,
 header input textarea:focus {
-  -webkit-box-shadow: 0 0 5px olivedrab;
-  box-shadow: 0 0 5px olivedrab;
-  border-bottom: 1px solid olivedrab;
+  -webkit-box-shadow: 0 0 5px #2ecc71;
+          box-shadow: 0 0 5px #2ecc71;
+  border-bottom: 1px solid #2ecc71;
 }
 
 header .checks {
-  width: 1200px;
+  width: 1125px;
   padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 header .checks div {
@@ -188,10 +209,10 @@ header .checks div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 header .checks div label {
@@ -214,7 +235,7 @@ header .checks input {
 header .checks input:focus,
 header .checks input textarea:focus {
   -webkit-box-shadow: 0 0 5px #ce4747;
-  box-shadow: 0 0 5px #ce4747;
+          box-shadow: 0 0 5px #ce4747;
   border-bottom: 1px solid #ce4747;
 }
 
@@ -225,11 +246,11 @@ header .checks input textarea:focus {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .loading .left-side {
@@ -238,10 +259,10 @@ header .checks input textarea:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 325px;
-  height: 900px;
+  height: 925px;
   border-right: 4px solid #3e3e46;
 }
 
@@ -251,10 +272,10 @@ header .checks input textarea:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 325px;
-  height: 900px;
+  height: 925px;
   border-left: 4px solid #34343a;
 }
 
@@ -265,11 +286,11 @@ header .checks input textarea:focus {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 50px;
   width: 100%;
   border-bottom: 2px solid #3e3e46;
@@ -283,16 +304,17 @@ header .checks input textarea:focus {
   border-radius: 2px;
   border: none;
   background-color: #15161a;
-  color: olivedrab;
+  color: #2ecc71;
 }
 
 .loading .location input:focus,
 .loading .location input textarea:focus {
-  -webkit-box-shadow: 0 0 10px olivedrab;
-  box-shadow: 0 0 10px olivedrab;
+  -webkit-box-shadow: 0 0 10px #2ecc71;
+          box-shadow: 0 0 10px #2ecc71;
 }
 
 .loading .loading-card {
+  margin-top: 15px;
   padding: 10px;
   height: 200px;
   width: 100%;
@@ -301,8 +323,8 @@ header .checks input textarea:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .loading .loading-card input {
@@ -323,7 +345,7 @@ header .checks input textarea:focus {
 .loading .loading-card input:focus,
 .loading .loading-card input textarea:focus {
   -webkit-box-shadow: 0 0 5px #0090a3;
-  box-shadow: 0 0 5px #0090a3;
+          box-shadow: 0 0 5px #0090a3;
   border-bottom: 1px solid #0090a3;
 }
 
@@ -337,25 +359,25 @@ header .checks input textarea:focus {
 
 .loading .loading-card .bus-voltage {
   -ms-flex-item-align: start;
-  align-self: flex-start;
+      align-self: flex-start;
   margin: 5px;
 }
 
 .loading .loading-card .reading {
   -ms-flex-item-align: end;
-  align-self: flex-end;
+      align-self: flex-end;
   margin: 5px;
 }
 
 .loading .loading-card .bus-voltage-right {
   -ms-flex-item-align: end;
-  align-self: flex-end;
+      align-self: flex-end;
   margin: 5px;
 }
 
 .loading .loading-card .reading-right {
   -ms-flex-item-align: start;
-  align-self: flex-start;
+      align-self: flex-start;
   margin: 5px;
 }
 
@@ -369,6 +391,81 @@ header .checks input textarea:focus {
 
 i {
   cursor: pointer;
+}
+
+.when {
+  padding: 5px;
+  width: 140px;
+  font-size: 1.1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border: 2px solid #1e1e22;
+  border-radius: 10px;
+  background: #3e3e46;
+  cursor: pointer;
+  text-align: center;
+  color: rgba(255, 255, 255, 0);
+  margin-left: -70px;
+}
+
+.first {
+  position: absolute;
+  top: 455px;
+  left: 50%;
+  margin-left: -70px;
+}
+
+.second {
+  position: absolute;
+  top: 670px;
+  left: 50%;
+  margin-left: -70px;
+}
+
+.third {
+  position: absolute;
+  top: 885px;
+  left: 50%;
+  margin-left: -70px;
+}
+
+.fourth {
+  position: absolute;
+  top: 1100px;
+  left: 50%;
+  margin-left: -70px;
+  color: none;
+}
+
+.before {
+  background: #04a3b8;
+  color: #16171a;
+  font-weight: bold;
+}
+
+.tied {
+  background: #ce4747;
+  color: #16171a;
+  font-weight: bold;
+}
+
+.adjusted {
+  background: #ee9e43;
+  color: #16171a;
+  font-weight: bold;
+}
+
+.after {
+  background: #2ecc71;
+  color: #16171a;
+  font-weight: bold;
 }
 
 @media print {
@@ -394,7 +491,7 @@ i {
   .container {
     border: none;
     -webkit-box-shadow: none;
-    box-shadow: none;
+            box-shadow: none;
   }
   h1 {
     font-size: 2em !important;
@@ -425,6 +522,26 @@ i {
   }
   .fa-square {
     opacity: 0;
+  }
+  .before {
+    background: white;
+    color: black;
+    font-weight: 400;
+  }
+  .tied {
+    background: white;
+    color: black;
+    font-weight: 400;
+  }
+  .adjusted {
+    background: white;
+    color: black;
+    font-weight: 400;
+  }
+  .after {
+    background: white;
+    color: black;
+    font-weight: 400;
   }
 }
 /*# sourceMappingURL=style.css.map */
