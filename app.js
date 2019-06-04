@@ -1,8 +1,42 @@
 let arrowBtns = document.getElementsByClassName("fas");
+let whenBtns = document.getElementsByClassName("when");
 
 function updateTitle() {
   let switchingOrder = document.getElementById("switching-order").value;
   document.title = switchingOrder;
+}
+
+for (let i = 0; i < whenBtns.length; i++) {
+  whenBtns[i].addEventListener("click", function() {
+    console.log(whenBtns[i].innerHTML);
+    switch (whenBtns[i].innerHTML) {
+      case "-":
+        whenBtns[i].classList.add("before");
+        whenBtns[i].innerHTML = "Before";
+        break;
+      case "Before":
+        whenBtns[i].classList.add("tied");
+        whenBtns[i].classList.remove("before");
+        whenBtns[i].innerHTML = "Tied";
+        break;
+      case "Tied":
+        whenBtns[i].classList.add("adjusted");
+        whenBtns[i].classList.remove("tied");
+        whenBtns[i].innerHTML = "Adjusted";
+        break;
+      case "Adjusted":
+        whenBtns[i].classList.add("after");
+        whenBtns[i].classList.remove("adjusted");
+        whenBtns[i].innerHTML = "After";
+        break;
+      case "After":
+        whenBtns[i].classList.remove("after");
+        whenBtns[i].innerHTML = "-";
+        break;
+      default:
+        break;
+    }
+  });
 }
 
 for (let i = 0; i < arrowBtns.length; i++) {
