@@ -413,6 +413,7 @@ i {
   text-align: center;
   color: rgba(255, 255, 255, 0);
   margin-left: -70px;
+  transition: all 0.3s ease
 }
 
 .first {
