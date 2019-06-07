@@ -2,13 +2,18 @@
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139409676-2"></script>
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-139409676-2"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-139409676-2');
-    </script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-139409676-2");
+    </script> -->
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,7 +60,7 @@
             <!-- <input type="text" id="backup" tabindex="5" /> -->
           </div>
           <div>
-            <label for="one15">115 Intact:</label>
+            <label for="one15">115 intact:</label>
             <i class="fas fa-square fa-2x"></i>
             <!-- <input type="text" id="one15" tabindex="6" /> -->
           </div>
@@ -138,7 +143,7 @@
                 <input type="text" tabindex="18" />
               </label>
               <i class="fas fa-arrow-left fa-lg dark-grey" id="left-one"></i>
-              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey mw"></i>
             </div>
             <div class="reading">
               <label for="voltage">
@@ -173,7 +178,7 @@
                 <input type="text" tabindex="26" />
               </label>
               <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey mw"></i>
             </div>
             <div class="reading">
               <label for="voltage">
@@ -205,7 +210,7 @@
                 <input type="text" tabindex="34" />
               </label>
               <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey mw"></i>
             </div>
             <div class="reading">
               <label for="voltage">
@@ -237,7 +242,7 @@
                 <input type="text" tabindex="42" />
               </label>
               <i class="fas fa-arrow-left fa-lg dark-grey"></i>
-              <i class="fas fa-arrow-right fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-right fa-lg dark-grey mw"></i>
             </div>
             <div class="reading">
               <label for="voltage">
@@ -274,7 +279,7 @@
               </label>
             </div>
             <div class="reading-right">
-              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-left fa-lg dark-grey mw"></i>
               <i class="fas fa-arrow-right fa-lg dark-grey"></i>
               <label for="voltage">
                 <input type="text" tabindex="22" />
@@ -306,7 +311,7 @@
               </label>
             </div>
             <div class="reading-right">
-              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-left fa-lg dark-grey mw"></i>
               <i class="fas fa-arrow-right fa-lg dark-grey"></i>
               <label for="voltage">
                 <input type="text" tabindex="30" />
@@ -338,7 +343,7 @@
               </label>
             </div>
             <div class="reading-right">
-              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-left fa-lg dark-grey mw"></i>
               <i class="fas fa-arrow-right fa-lg dark-grey"></i>
               <label for="voltage">
                 <input type="text" tabindex="38" />
@@ -370,7 +375,7 @@
               </label>
             </div>
             <div class="reading-right">
-              <i class="fas fa-arrow-left fa-lg dark-grey"></i>
+              <i class="fas fa-arrow-left fa-lg dark-grey mw"></i>
               <i class="fas fa-arrow-right fa-lg dark-grey"></i>
               <label for="voltage">
                 <input type="text" tabindex="46" />
@@ -392,9 +397,9 @@
         <i class="fas fa-print fa-2x print"></i>
         print
       </div>
-      <div class="when first noselect">-</div>
-      <div class="when second noselect">-</div>
-      <div class="when third noselect">-</div>
+      <div class="when first noselect before">Before</div>
+      <div class="when second noselect tied">Tied</div>
+      <div class="when third noselect">After/Adjusted</div>
       <div class="when fourth noselect">-</div>
     </div>
 
