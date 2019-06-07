@@ -63,9 +63,9 @@ input {
 
 header {
   margin-top: 15px;
-  height: 300px;
+  margin-bottom: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
 
@@ -111,7 +111,7 @@ header {
 
   .title {
     letter-spacing: 2px;
-    margin: 50px 0 30px 0;
+    margin: 5px 0 25px 0;
     color: rgb(206, 207, 207);
     font-size: 3em;
   }
@@ -168,7 +168,7 @@ header {
 }
 
 .loading {
-  margin-top: 75px;
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -285,31 +285,31 @@ i {
   background: rgb(62, 62, 70);
   cursor: pointer;
   text-align: center;
-  color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.144);
   margin-left: -70px;
 }
 
 .first {
   position: absolute;
-  top: 455px;
+  top: 465px;
   left: 50%;
   margin-left: -70px;
 }
 .second {
   position: absolute;
-  top: 670px;
+  top: 680px;
   left: 50%;
   margin-left: -70px;
 }
 .third {
   position: absolute;
-  top: 885px;
+  top: 895px;
   left: 50%;
   margin-left: -70px;
 }
 .fourth {
   position: absolute;
-  top: 1100px;
+  top: 1110px;
   left: 50%;
   margin-left: -70px;
   color: none;
@@ -396,6 +396,9 @@ i {
   }
   .fa-square {
     opacity: 0;
+  }
+  .when {
+    color: rgba(0, 0, 0, 0);
   }
   .before {
     background: white;
