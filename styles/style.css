@@ -84,13 +84,13 @@ input {
 
 header {
   margin-top: 15px;
-  height: 300px;
+  margin-bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -168,7 +168,7 @@ header .limits .loading-limits div {
 
 header .title {
   letter-spacing: 2px;
-  margin: 50px 0 30px 0;
+  margin: 5px 0 25px 0;
   color: #cecfcf;
   font-size: 3em;
 }
@@ -240,7 +240,7 @@ header .checks input textarea:focus {
 }
 
 .loading {
-  margin-top: 75px;
+  margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,35 +411,34 @@ i {
   background: #3e3e46;
   cursor: pointer;
   text-align: center;
-  color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.144);
   margin-left: -70px;
-  transition: all 0.3s ease;
 }
 
 .first {
   position: absolute;
-  top: 455px;
+  top: 465px;
   left: 50%;
   margin-left: -70px;
 }
 
 .second {
   position: absolute;
-  top: 670px;
+  top: 680px;
   left: 50%;
   margin-left: -70px;
 }
 
 .third {
   position: absolute;
-  top: 885px;
+  top: 895px;
   left: 50%;
   margin-left: -70px;
 }
 
 .fourth {
   position: absolute;
-  top: 1100px;
+  top: 1110px;
   left: 50%;
   margin-left: -70px;
   color: none;
@@ -523,6 +522,9 @@ i {
   }
   .fa-square {
     opacity: 0;
+  }
+  .when {
+    color: rgba(0, 0, 0, 0);
   }
   .before {
     background: white;
